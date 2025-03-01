@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Países REST</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link href="https://fonts.google.com/specimen/Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>¿Dónde en el mundo?</h1>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-toggle__icon">🌙</span>
+                <span class="theme-toggle__text">Modo Oscuro</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="controls">
+                <div class="search-wrapper">
+                    <input type="text" id="search" class="search" placeholder="Buscar un país..." aria-label="Buscar un país">
+                </div>
+                <div class="filter-wrapper">
+                    <select id="region-filter" class="region-filter" aria-label="Filtrar por región">
+                        <option value="">Filtrar por Región</option>
+                        <option value="Africa">África</option>
+                        <option value="Americas">América</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europa</option>
+                        <option value="Oceania">Oceanía</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="countries-grid" class="countries-grid">
+                <!-- Countries will be inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <div id="country-detail" class="country-detail hidden">
+        <!-- Country detail will be inserted here -->
+    </div>
+
+    <script src="js/models/Country.js"></script>
+    <script src="js/services/CountryService.js"></script>
+    <script src="js/views/CountryList.js"></script>
+    <script src="js/views/CountryDetail.js"></script>
+    <script src="js/utils/ThemeManager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 

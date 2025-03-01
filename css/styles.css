@@ -1,0 +1,70 @@
+:root {
+    /* Colores - Tema Claro */
+    --color-text: hsl(200, 15%, 8%);
+    --color-input: hsl(0, 0%, 52%);
+    --color-background: hsl(0, 0%, 98%);
+    --color-elements: hsl(0, 0%, 100%);
+    
+    /* Colores - Tema Oscuro */
+    --color-dark-elements: hsl(209, 23%, 22%);
+    --color-dark-background: hsl(207, 26%, 17%);
+    
+    /* Sistema de Espaciado - usando rem para mejor escalabilidad */
+    --spacing-xs: 0.5rem;  /* 8px */
+    --spacing-sm: 1rem;    /* 16px */
+    --spacing-md: 1.5rem;  /* 24px */
+    --spacing-lg: 2rem;    /* 32px */
+    --spacing-xl: 3rem;    /* 48px */
+    
+    /* Bordes Redondeados */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    
+    /* Sistema de Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.5;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambio de tema */
+}
+
+/* Contenedor Principal - Máximo 1440px para pantallas grandes */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Tipografía */
+h1 {
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+/* Clases de Utilidad */
+.hidden {
+    display: none !important;
+}
+
+/* Diseño Responsivo */
+@media (max-width: 375px) {
+    :root {
+        --spacing-md: 1rem; /* Reducción de espaciado en móviles */
+    }
+    
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+} 
